@@ -3,5 +3,8 @@ dependencies:
 compiler:
   solc:
     remappings:
-      - '@openzeppelin=Openzeppelin/openzeppelin-contracts@4.3.2'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.3.2'
+
 dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
