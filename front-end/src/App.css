@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Free Pixel";
+  src: local("Free Pixel", url(./fonts/FreePixel.ttf));
+}
+h2 {
+  font-family: "Free Pixel", monospace;
+}

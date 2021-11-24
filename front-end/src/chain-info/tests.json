@@ -1,0 +1,24 @@
+{
+  "contracts": {
+    "LinkToken": "49e7bae2df618e81d877632c6ad55872ff2ce801",
+    "NFTPomoBots": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "OpenZeppelin/openzeppelin-contracts@4.3.2/ERC1155": "7e9da548010fdc14a34b2314e8ec1d92fc235d93",
+    "OpenZeppelin/openzeppelin-contracts@4.3.2/ERC20": "5c27d7156fdbfe889902cc167df697405a50ad20",
+    "RoboToken": "5b61f8f21cf0de8b6e5d21a91f7c5d6f6a7e7128",
+    "VRFCoordinatorMock": "a234e721cab3c47e532d8404949512e63f344855",
+    "smartcontractkit/chainlink-brownie-contracts@0.2.2/BasicToken": "92084ac5279a2a3db988d9e01d7e6d3e3a4dab8d",
+    "smartcontractkit/chainlink-brownie-contracts@0.2.2/SafeMathChainlink": "3b4158955f564edb18bd7a8ffdb49859c904f0b7",
+    "smartcontractkit/chainlink-brownie-contracts@0.2.2/StandardToken": "7f21b0e2f1d1fcf89f4466183c9e73bc3cf77276",
+    "smartcontractkit/chainlink-brownie-contracts@0.2.2/VRFRequestIDBase": "73df0a6f5d0123eb2b2db0faf62b602aa77c123a"
+  },
+  "tests": {
+    "tests/unit/test_robo_token.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "sssssF",
+      "sha1": "0b367a09d7e5355f7a527dabd592bbdc3f5010c4",
+      "txhash": []
+    }
+  },
+  "tx": {}
+}
