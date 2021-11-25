@@ -13,6 +13,28 @@ body {
   background: radial-gradient(circle, #533535 0%, #e6cca9 65%); */
 }
 
+.labels {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: 25%;
+  padding: 0.3rem 0.3rem;
+  justify-content: space-between;
+}
+
+li {
+  margin-left: 10px;
+}
+
+.last-button {
+  margin-left: 10px;
+}
+.active-label {
+  color: white;
+  background-color: #9230aa;
+}
+
 .form-container {
   text-align: center;
 }
@@ -21,12 +43,59 @@ body {
   height: 30px;
   width: 30px;
   padding: 2rem;
-  border: solid 1px black;
-  border-radius: 50%;
-  /* color: #7b1fa2; */
+  border: solid 1px #9230aa;
+  border-radius: 25%;
+  color: #9230aa;
   margin-right: 0.3rem;
   text-align: center;
   font-size: 14pt;
+  font-family: "Free Pixel", monospace;
+}
+
+h3 {
+  font-family: "Free Pixel";
+}
+
+.set-working {
+  color: white;
+  background-color: #9230aa;
+  padding: 0.6rem;
+  font-size: 13pt;
+  font-family: "Free Pixel", monospace;
+  text-align: center;
+  border-radius: 7px;
+  margin-top: 15px;
+  border: none;
+  /* transition-duration: 0.4s; */
+  box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.set-working:hover {
+  background-color: #7b1fa2;
+  cursor: pointer;
+}
+
+button {
+  color: #7b1fa2;
+  font-size: 1rem;
+  font-family: "Free Pixel", monospace;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #7b1fa2;
+  border-radius: 0.7rem;
+  margin: 0.2rem;
+  background: white;
+  min-width: 80px;
+  cursor: pointer;
+}
+
+.time-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 7.5rem;
+  color: #efefef;
+  font-size: 3.5rem;
   font-family: "Free Pixel", monospace;
 }
 

@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@usedapp/core": "^0.6.3",
     "moralis": "^0.0.135",
     "react": "^17.0.2",
     "react-countdown-circle-timer": "^2.5.4",

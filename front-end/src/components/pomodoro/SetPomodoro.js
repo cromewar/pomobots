@@ -1,8 +1,11 @@
 import { PomoButton } from "./PomoButton";
 import { useState, useContext } from "react";
 import "../../styles/Pomodoro.css";
+import { SettingContext } from "../../context/SettingsContext";
 
 export const SetPomodoro = () => {
+  const { updateExecute } = useContext(SettingContext);
+
   const [newTimer, setNewTimer] = useState({
     work: 0.3,
     short: 0.2,
@@ -40,7 +43,7 @@ export const SetPomodoro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // updateExecute(newTimer);
+    updateExecute(newTimer);
   };
 
   return (
@@ -67,7 +70,7 @@ export const SetPomodoro = () => {
           />
         </div>
         <PomoButton
-          className="pomo-button"
+          activeClass="set-working"
           title="set working time"
           _callback={handleSubmit}
         />
