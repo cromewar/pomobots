@@ -1,4 +1,9 @@
-import { Button, Box } from "@mui/material";
+import "../styles/Header.css";
+import { useEthers } from "@usedapp/core";
+import { constants } from "ethers";
+
+import { Button, Box, Tab, Tabs } from "@mui/material";
+import { TokenBalance } from "./wallet/UserWallet";
 import {
   useMoralis,
   useMoralisWeb3Api,
@@ -7,14 +12,14 @@ import {
 import { useState, useEffect } from "react";
 import networkMapping from "../chain-info/deployments/map.json";
 
+import { UserWallet } from "./wallet/UserWallet";
+
 const isValidNetwork = (network) => {
   if (networkMapping.hasOwnProperty(network)) {
     return true;
   }
   return false;
 };
-
-const tabOptions = ["Mint Pomobot", "Demo Mode"];
 
 export const Header = () => {
   const sx = {
@@ -32,6 +37,10 @@ export const Header = () => {
       // backgroundColor: "#f9f3df",
     },
     but: { fontFamily: "Free Pixel", fontSize: "16px" },
+    tabs: {
+      marginLeft: "15px",
+      marginTop: "10px",
+    },
   };
 
   const {
@@ -60,7 +69,6 @@ export const Header = () => {
     return null;
   };
 
-  const [selectedTab, setSelectedTab] = useState(tabOptions[0]);
   const [networkId, setNetworkId] = useState(null);
 
   useEffect(() => {
@@ -71,20 +79,27 @@ export const Header = () => {
     getChain().then(setNetworkId);
   });
 
-  const handleTabChange = (event, newTab) => {
-    setSelectedTab(newTab);
-  };
+  const { chainId, error } = useEthers();
 
-  const retroCatsAddress = isValidNetwork(networkId)
-    ? networkMapping[networkId.toString()]["RoboToken"][0]
-    : "0x0000000000000000000000000000000000000000";
+  const roboTokenAddress = chainId
+    ? networkMapping[String(chainId)]["RoboToken"][0]
+    : constants.AddressZero;
+
+  const tokenAd = "0xbFC98BA1eEd442ca5cC27f8b4967bCdcA2E86BC0";
+
   return (
     <Box component="nav" sx={sx.navbar}>
-      <div>
+      <div className="navbar-header">
         <h2 className="title1"> Pomobots</h2>
-        <h2 className="title1"> Pomobots</h2>
+        <Box sx={sx.tabs}>
+          <Tabs>
+            <Tab label="Mint Bots" className={sx.but} />
+            <Tab label="Demo Mode" className={sx.but} />
+          </Tabs>
+        </Box>
       </div>
       <div>
+        <UserWallet token={tokenAd}></UserWallet>
         <Button
           variant="contained"
           color="secondary"
